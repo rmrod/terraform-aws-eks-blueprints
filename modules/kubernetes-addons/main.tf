@@ -815,3 +815,13 @@ module "consul" {
   manage_via_gitops = var.argocd_manage_add_ons
   addon_context     = local.addon_context
 }
+
+module "provectus_kafka_ui" {
+  count             = var.enable_provectus_kafka_ui ? 1 : 0
+  source            = "./provectus-kafka-ui"
+  helm_config       = var.provectus_kafka_ui_helm_config
+  manage_via_gitops = var.argocd_manage_add_ons
+  app_config        = var.provectus_kafka_ui_app_config
+  env_config        = var.provectus_kafka_ui_env_config
+  addon_context     = local.addon_context
+}

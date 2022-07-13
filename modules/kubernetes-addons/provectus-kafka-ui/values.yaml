@@ -1,0 +1,6 @@
+yamlApplicationConfig:
+  ${indent(2, yamlencode(appConfig))}
+
+envs:
+  config:
+    ${indent(4, yamlencode(envConfig))}

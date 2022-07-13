@@ -1472,3 +1472,26 @@ variable "consul_helm_config" {
   type        = any
   default     = {}
 }
+
+#-----------Provectus Kafka-UI ADDON-------------
+variable "enable_provectus_kafka_ui" {
+  description = "Enable Provectus Kafka UI add-on"
+  type        = bool
+  default     = false
+}
+
+variable "provectus_kafka_ui_helm_config" {
+  description = "Kubernetes Provectus Kafka-UI Helm Chart config"
+  type        = any
+  default     = null
+}
+
+variable "provectus_kafka_ui_app_config" {
+  type    = any
+  default = {}
+}
+
+variable "provectus_kafka_ui_env_config" {
+  type    = any
+  default = {}
+}

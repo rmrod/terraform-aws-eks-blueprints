@@ -53,6 +53,7 @@ locals {
     consul                    = var.enable_consul ? module.consul[0].argocd_gitops_config : null
     thanos                    = var.enable_thanos ? module.thanos[0].argocd_gitops_config : null
     kubeStateMetrics          = var.enable_kube_state_metrics ? module.kube_state_metrics[0].argocd_gitops_config : null
+    provectusKafkaUi          = var.enable_provectus_kafka_ui ? module.provectus_kafka_ui[0].argocd_gitops_config : null
   }
 
   addon_context = {
